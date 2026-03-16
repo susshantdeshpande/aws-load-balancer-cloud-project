@@ -1,85 +1,115 @@
-AWS Load Balancer Cloud Project
+☁️ AWS Load Balancer Cloud Project
 
-This project demonstrates how to deploy a scalable web application using AWS cloud infrastructure with a custom VPC and Application Load Balancer.
+🚀 A Production-Style AWS Infrastructure Project
+
+This project demonstrates how to deploy a scalable cloud web application using AWS networking and load balancing architecture.
+
+The application is automatically deployed on EC2 instances using User Data automation.
 
 ---
 
-📌 Architecture Diagram
+🏗️ Cloud Architecture
 
 "Architecture" (architecture/aws-architecture.png)
 
-The above architecture shows how traffic flows from users to the application through AWS networking and load balancing services.
+This architecture ensures high availability, scalability, and fault tolerance by distributing incoming traffic across multiple EC2 instances using an Application Load Balancer.
 
 ---
 
-🖥️ Project Output
+🌐 Application Output
 
 "Website Output" (screenshots/website-output.png)
 
-The web page is automatically deployed on EC2 instances using a User Data script during instance launch.
+The webpage is deployed automatically during EC2 instance launch using a User Data script.
 
 ---
 
 ⚙️ AWS Services Used
 
-- Amazon VPC
-- Public Subnets
-- Private Subnets
-- Internet Gateway
-- NAT Gateway
-- Application Load Balancer
-- Target Group
-- EC2 Ubuntu Instances
-- Nginx Web Server
+Service| Purpose
+Amazon VPC| Custom cloud network
+Public Subnets| Load Balancer placement
+Private Subnets| EC2 application servers
+Internet Gateway| Internet connectivity
+NAT Gateway| Private subnet internet access
+Application Load Balancer| Traffic distribution
+Target Group| Instance routing
+EC2 Ubuntu| Application hosting
+Nginx| Web server
 
 ---
 
-🔄 Architecture Flow
+🔁 Traffic Flow
 
 User
-⬇
+   │
+   ▼
 Application Load Balancer
-⬇
+   │
+   ▼
 Target Group
-⬇
+   │
+   ▼
 EC2 Instances
 
-The load balancer distributes incoming traffic across multiple EC2 instances to ensure high availability and scalability.
+The load balancer distributes incoming traffic across multiple servers to ensure high availability and performance.
 
 ---
 
 🤖 Automation Using User Data
 
-The EC2 instances are automatically configured using a User Data script which:
-
-- Updates the system
-- Installs Nginx web server
-- Deploys the HTML cloud project page
-- Enables the Nginx service
+The EC2 instances are automatically configured during launch using the following script.
 
 Script location:
 
 userdata/install-nginx.sh
 
+The script performs:
+
+- System update
+- Nginx installation
+- Automatic website deployment
+- Service enablement
+
 ---
 
 🚀 Deployment Steps
 
-1. Create a Custom VPC
-2. Create Public and Private Subnets
-3. Attach Internet Gateway
-4. Create NAT Gateway
-5. Configure Route Tables
-6. Launch EC2 Ubuntu Instances
-7. Add User Data Script
-8. Create Target Group
-9. Create Application Load Balancer
-10. Register EC2 Instances
-11. Access the application via Load Balancer DNS
+1️⃣ Create Custom VPC
+2️⃣ Create Public & Private Subnets
+3️⃣ Attach Internet Gateway
+4️⃣ Create NAT Gateway
+5️⃣ Configure Route Tables
+6️⃣ Launch EC2 Instances (Ubuntu)
+7️⃣ Add User Data Script
+8️⃣ Create Target Group
+9️⃣ Create Application Load Balancer
+🔟 Register EC2 Instances
+1️⃣1️⃣ Access via Load Balancer DNS
 
-Detailed setup steps are available in:
+Detailed steps available in:
 
 docs/setup-guide.md
+
+---
+
+📂 Project Structure
+
+aws-load-balancer-cloud-project
+│
+├── architecture
+│   └── aws-architecture.png
+│
+├── userdata
+│   └── install-nginx.sh
+│
+├── screenshots
+│   └── website-output.png
+│
+├── docs
+│   └── setup-guide.md
+│
+└── README.md
 
 ---
 
@@ -87,4 +117,7 @@ docs/setup-guide.md
 
 Sushant Deshpande
 
-Cloud / DevOps Project demonstrating scalable AWS infrastructure using load balancing and automated deployment.
+DevOps / Cloud Infrastructure Project
+Demonstrating scalable AWS architecture with automated deployment.
+
+---
