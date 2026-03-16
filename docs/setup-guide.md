@@ -31,4 +31,6 @@ AWS Load Balancer Cloud Project Setup
 
 
 11 Register EC2 Instances
+
+
 12 Access Application via Load Balancer DNS
